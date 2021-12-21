@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/EleccionBoton.unity
+    path: Assets/Scenes/WebPage/EleccionBoton.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Web/Inicio.unity
+    path: Assets/Scenes/WebPage/Inicio.unity
     guid: 8c17f33096de2ab4d8b0ab76e9db517e
   - enabled: 1
-    path: Assets/Scenes/Web/Juego.unity
+    path: Assets/Scenes/WebPage/Juego.unity
     guid: 76f66b6d5c52e3243bec0e4d72b7a751
   - enabled: 1
-    path: Assets/Scenes/Web/Modelado.unity
+    path: Assets/Scenes/WebPage/Modelado.unity
     guid: 5c6cf3caee9d3944689e5f99e73aab6b
   - enabled: 1
-    path: Assets/Scenes/Web/Presentacion.unity
+    path: Assets/Scenes/WebPage/Presentacion.unity
     guid: 2a3d00625a48a3646989357d583abd4f
   - enabled: 1
-    path: Assets/Scenes/Juego/Decoracion.unity
+    path: Assets/Scenes/WebGame/Decoracion.unity
     guid: a17a1bc505e4f3e488c72c39af5d6970
   m_configObjects: {}
