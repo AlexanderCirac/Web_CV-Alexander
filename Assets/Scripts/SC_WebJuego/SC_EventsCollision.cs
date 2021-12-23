@@ -50,7 +50,7 @@ namespace WebGame
                   //Teleport to another side
                   if (_idTypeEvent == 1 && _zonetToTeleport != null)
                       coll.transform.position = _zonetToTeleport.transform.position;
-                  //Move object 
+                  //Move object how was a ping pong
                   if (_idTypeEvent == 2)
                   {
                       _activateToMove = true;
@@ -83,29 +83,29 @@ namespace WebGame
           public void ApplicateMovement()
           {
               if(_variablsToMove._objectToMove != null && _variablsToMove._objectToPos1 != null && _variablsToMove._objectToPos2 != null && _variablsToMove._velocity != 0)
-              ToMove(_variablsToMove._objectToMove, _variablsToMove._objectToPos1, _variablsToMove._objectToPos2, _variablsToMove._velocity);
+              ToMove(_variablsToMove._objectToMove.transform, _variablsToMove._objectToPos1.transform, _variablsToMove._objectToPos2.transform, _variablsToMove._velocity);
           }
 
-          public void ToMove(GameObject _Object,GameObject _obj1, GameObject _obj2, float _velocity )
+          public void ToMove(Transform _originObject, Transform __posObject1, Transform _postObject2, float _velocity )
           {
               if (_activateToMove)
               {
-                  if (_Object.transform.position.x > _obj1.transform.position.x )
+                  if (_originObject.position.x > __posObject1.position.x )
                   {
-                        _Object.transform.position = new Vector3(_Object.transform.position.x - _velocity * Time.deltaTime,
-                        _Object.transform.position.y, 
-                        _Object.transform.position.z);
+                        _originObject.position = new Vector3(_originObject.position.x - _velocity * Time.deltaTime,
+                        _originObject.position.y, 
+                        _originObject.position.z);
                   }
                   else
                         _activateToMove = false;
               }
               else
               {
-                  if (_Object.transform.position.x < _obj2.transform.position.x)
+                  if (_originObject.position.x < _postObject2.position.x)
                   {
-                       _Object.transform.position = new Vector3(_Object.transform.position.x + _velocity * Time.deltaTime,
-                       _Object.transform.position.y, 
-                       _Object.transform.position.z);
+                       _originObject.position = new Vector3(_originObject.position.x + _velocity * Time.deltaTime,
+                       _originObject.position.y, 
+                       _originObject.position.z);
                   }
                   else
                   {
