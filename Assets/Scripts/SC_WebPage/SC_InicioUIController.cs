@@ -24,14 +24,11 @@ namespace WebPage.UI
               Cursor.visible = true;
               Cursor.lockState = CursorLockMode.None;
               //Applying functions to ButtonToChargeLevel if there is
-              if (_buttonToChargeLevel.Length != 0)
-              {
-                  int _raidButtons = 1, a = 0, b = 0, c= 0;
-                  for (; _raidButtons <= _buttonToChargeLevel.Length; _raidButtons++)
-                  { 
-                    int _count = _raidButtons;
-                    _buttonToChargeLevel[_raidButtons-1]._buttonToLoadLevel.onClick.AddListener(() => SceneManager.LoadScene(_buttonToChargeLevel[_count - 1]._intLevel));
-                  }
+              int _raidButtons = 1, a = 0, b = 0, c= 0;
+              for (; _raidButtons <= _buttonToChargeLevel.Length; _raidButtons++)
+              { 
+                  int _count = _raidButtons;
+                  _buttonToChargeLevel[_raidButtons-1]._buttonToLoadLevel.onClick.AddListener(() => SceneManager.LoadScene(_buttonToChargeLevel[_count - 1]._intLevel));
               }
           }
           #endregion
