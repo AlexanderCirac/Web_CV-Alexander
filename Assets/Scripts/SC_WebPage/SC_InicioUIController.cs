@@ -21,8 +21,10 @@ namespace WebPage.UI
           // Start is called before the first frame update
           void Start()
           { 
+              //Start Game
               Cursor.visible = true;
               Cursor.lockState = CursorLockMode.None;
+
               //Applying functions to ButtonToChargeLevel if there is
               int _raidButtons = 1, a = 0, b = 0, c= 0;
               for (; _raidButtons <= _buttonToChargeLevel.Length; _raidButtons++)

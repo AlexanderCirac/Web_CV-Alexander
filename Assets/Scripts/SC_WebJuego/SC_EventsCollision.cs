@@ -8,9 +8,9 @@ namespace WebGame
     {
           #region Attributes
           [SerializeField] private int _idTypeEvent = 0;
-          [Header("Type_0")]
+          [Header("Type Collision_0")]
           [SerializeField] private string _url = "";
-          [Header("Type_1")]
+          [Header("Type Collision_1")]
           [SerializeField] private GameObject _zonetToTeleport;          
           [System.Serializable] public class VariableType2 {
                 public GameObject _objectToMove;
@@ -19,11 +19,11 @@ namespace WebGame
                 public float _velocity = 0;
            }
 
-          [Header("Type_2")]
+          [Header("TypeCollision_2")]
           [SerializeField] private VariableType2 _variablsToMove;
           private bool _activateCoroutine = false;
           private bool _activateToMove = false;
-          [Header("Type_3")]
+          [Header("Type Collision_3")]
           [SerializeField] private GameObject _objectToShow;
 
           //Events 
@@ -50,6 +50,7 @@ namespace WebGame
                   //Teleport to another side
                   if (_idTypeEvent == 1 && _zonetToTeleport != null)
                       coll.transform.position = _zonetToTeleport.transform.position;
+
                   //Move object how was a ping pong
                   if (_idTypeEvent == 2)
                   {
@@ -58,6 +59,7 @@ namespace WebGame
                       OnMovment += ApplicateMovement;
                       StartCoroutine(CoroutineOnMovment());
                   }
+
                   //Show Object
                   if (_idTypeEvent == 3)
                        ShowObjects(true);

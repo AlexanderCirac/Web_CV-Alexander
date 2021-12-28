@@ -1125,18 +1125,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 568836766}
-          m_TargetAssemblyTypeName: Coso, Assembly-CSharp
-          m_MethodName: CargarURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://drive.google.com/drive/folders/1btpC_kdcZRCMFGE_NPNt6lW0NWCiDmLU?usp=sharing
-            m_BoolArgument: 1
-          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
@@ -6280,6 +6268,9 @@ MonoBehaviour:
   - _name: UE_Jam
     _buttonToURL: {fileID: 884272857}
     _textToURL: https://ziababs.itch.io/space-less-odyssey
+  - _name: Descargar_CV
+    _buttonToURL: {fileID: 308548106}
+    _textToURL: https://drive.google.com/drive/folders/1btpC_kdcZRCMFGE_NPNt6lW0NWCiDmLU?usp=sharing
 --- !u!4 &1689361304
 Transform:
   m_ObjectHideFlags: 0
