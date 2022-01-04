@@ -69,7 +69,7 @@ namespace WebGame
           private void OnTriggerExit(Collider coll)
           {
               if (_idTypeEvent == 3 && coll.CompareTag("Player"))
-                      ShowObjects(false);
+                    ShowObjects(false);
           }
 
           IEnumerator CoroutineOnMovment()
@@ -78,21 +78,22 @@ namespace WebGame
               {
                 if (OnMovment != null)
                     OnMovment();
-                    yield return null;
+
+                yield return null;
               }
           }
 
           public void ApplicateMovement()
           {
               if(_variablsToMove._objectToMove != null && _variablsToMove._objectToPos1 != null && _variablsToMove._objectToPos2 != null && _variablsToMove._velocity != 0)
-              ToMove(_variablsToMove._objectToMove.transform, _variablsToMove._objectToPos1.transform, _variablsToMove._objectToPos2.transform, _variablsToMove._velocity);
+                  ToMove(_variablsToMove._objectToMove.transform, _variablsToMove._objectToPos1.transform, _variablsToMove._objectToPos2.transform, _variablsToMove._velocity);
           }
 
-          public void ToMove(Transform _originObject, Transform __posObject1, Transform _postObject2, float _velocity )
+          public void ToMove(Transform _originObject, Transform _destination1, Transform _destination2, float _velocity )
           {
               if (_activateToMove)
               {
-                  if (_originObject.position.x > __posObject1.position.x )
+                  if (_originObject.position.x > _destination1.position.x )
                   {
                         _originObject.position = new Vector3(_originObject.position.x - _velocity * Time.deltaTime,
                         _originObject.position.y, 
@@ -103,7 +104,7 @@ namespace WebGame
               }
               else
               {
-                  if (_originObject.position.x < _postObject2.position.x)
+                  if (_originObject.position.x < _destination2.position.x)
                   {
                        _originObject.position = new Vector3(_originObject.position.x + _velocity * Time.deltaTime,
                        _originObject.position.y, 
