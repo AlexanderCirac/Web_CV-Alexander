@@ -1,21 +1,20 @@
 using UnityEngine;
 using System;
-using System.Collections;
 
 namespace WebGame
 {
     public class SC_EventsCollision : MonoBehaviour
     {
           #region Attributes
-          [SerializeField] private int _idTypeEvent = 0;
+          [SerializeField] private EventsTypes _eventsEnum;
           [Header("Type Collision_0")]
           [SerializeField] private string _url = "";
           [Header("Type Collision_1")]
-          [SerializeField] private GameObject _zonetToTeleport;          
+          [SerializeField] private GameObject _positionTeleportObject;          
           [System.Serializable] public class VariableType2 {
-                public GameObject _objectToMove;
-                public GameObject _objectToPos1;
-                public GameObject _objectToPos2;
+                public GameObject _moveObject;
+                public GameObject _position1Object;
+                public GameObject _position2Object;
                 public float _velocity = 0;
            }
 
@@ -24,17 +23,22 @@ namespace WebGame
           private bool _activateCoroutine = false;
           private bool _activateToMove = false;
           [Header("Type Collision_3")]
-          [SerializeField] private GameObject _objectToShow;
+          [SerializeField] private GameObject _showObjects;
 
           //Events 
-          public event Action OnMovment;
+          public event Action<Transform, Transform, Transform, float> OnMovment;
           #endregion
           
           #region UnityCalls
           void Start()
           {
-                if(_idTypeEvent == 3)
-                    _objectToShow.SetActive(false);
+                if(_eventsEnum == EventsTypes.ShowEvent)
+                    _showObjects.SetActive(false);
+          }          
+          void Update()
+          {
+              if (OnMovment != null)
+                    OnMovment(_variablsToMove._moveObject.transform, _variablsToMove._position1Object.transform, _variablsToMove._position2Object.transform, _variablsToMove._velocity);
           }
           #endregion
 
@@ -44,52 +48,32 @@ namespace WebGame
               if (coll.CompareTag("Player"))
               { 
                   //Open URL
-                  if (_idTypeEvent == 0)
+                  if (_eventsEnum == EventsTypes.UrlEvent)
                       Application.OpenURL(_url);
                   
                   //Teleport to another side
-                  if (_idTypeEvent == 1 && _zonetToTeleport != null)
-                      coll.transform.position = _zonetToTeleport.transform.position;
+                  if (_eventsEnum == EventsTypes.TeleportEvent && _positionTeleportObject != null)
+                      coll.transform.position = _positionTeleportObject.transform.position;
 
                   //Move object how was a ping pong
-                  if (_idTypeEvent == 2)
+                  if (_eventsEnum == EventsTypes.PushEvent)
                   {
                       _activateToMove = true;
-                      _activateCoroutine = true;
-                      OnMovment += ApplicateMovement;
-                      StartCoroutine(CoroutineOnMovment());
+                      OnMovment += ToMove;
                   }
 
                   //Show Object
-                  if (_idTypeEvent == 3)
-                       ShowObjects(true);
+                  if (_eventsEnum == EventsTypes.ShowEvent)
+                       ToShow(true);
               }
           }
 
           private void OnTriggerExit(Collider coll)
           {
-              if (_idTypeEvent == 3 && coll.CompareTag("Player"))
-                    ShowObjects(false);
+              if (_eventsEnum == EventsTypes.ShowEvent && coll.CompareTag("Player"))
+                    ToShow(false);
           }
-
-          IEnumerator CoroutineOnMovment()
-          {
-              while(_activateCoroutine)
-              {
-                if (OnMovment != null)
-                    OnMovment();
-
-                yield return null;
-              }
-          }
-
-          public void ApplicateMovement()
-          {
-              if(_variablsToMove._objectToMove != null && _variablsToMove._objectToPos1 != null && _variablsToMove._objectToPos2 != null && _variablsToMove._velocity != 0)
-                  ToMove(_variablsToMove._objectToMove.transform, _variablsToMove._objectToPos1.transform, _variablsToMove._objectToPos2.transform, _variablsToMove._velocity);
-          }
-
-          public void ToMove(Transform _originObject, Transform _destination1, Transform _destination2, float _velocity )
+          private void ToMove(Transform _originObject, Transform _destination1, Transform _destination2, float _velocity )
           {
               if (_activateToMove)
               {
@@ -112,15 +96,13 @@ namespace WebGame
                   }
                   else
                   {
-                       _activateCoroutine = false;
-                       OnMovment -= ApplicateMovement;
+                       OnMovment -= ToMove;
                   }
               }
           }
-
-          private void ShowObjects(bool _activateShow) 
+          private void ToShow(bool _boolShow) 
           { 
-              _objectToShow.SetActive(_activateShow);
+              _showObjects.SetActive(_boolShow);
           }
           #endregion
     }
