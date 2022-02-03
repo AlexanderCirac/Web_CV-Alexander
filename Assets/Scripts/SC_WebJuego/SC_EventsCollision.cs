@@ -7,9 +7,9 @@ namespace WebGame
     {
           #region Attributes
           [SerializeField] private EventsTypes _eventsEnum;
-          [Header("Type Collision_0")]
-          [SerializeField] private string _url = "";
-          [Header("Type Collision_1")]
+          [Header("URL Event")]
+          [SerializeField] private string _urlText = "";
+          [Header("Teleport Event")]
           [SerializeField] private GameObject _positionTeleportObject;          
           [System.Serializable] public class VariableType2 {
                 public GameObject _moveObject;
@@ -18,12 +18,12 @@ namespace WebGame
                 public float _velocity = 0;
            }
 
-          [Header("TypeCollision_2")]
+          [Header("Push Event")]
           [SerializeField] private VariableType2 _variablsToMove;
-          private bool _activateCoroutine = false;
-          private bool _activateToMove = false;
-          [Header("Type Collision_3")]
+          [Header("Show Event")]
           [SerializeField] private GameObject _showObjects;
+          //bool
+          private bool _activateToMove = false;
 
           //Events 
           public event Action<Transform, Transform, Transform, float> OnMovment;
@@ -49,13 +49,13 @@ namespace WebGame
               { 
                   //Open URL
                   if (_eventsEnum == EventsTypes.UrlEvent)
-                      Application.OpenURL(_url);
+                      Application.OpenURL(_urlText);
                   
-                  //Teleport to another side
+                  //Teleporting
                   if (_eventsEnum == EventsTypes.TeleportEvent && _positionTeleportObject != null)
                       coll.transform.position = _positionTeleportObject.transform.position;
 
-                  //Move object how was a ping pong
+                  //Move object
                   if (_eventsEnum == EventsTypes.PushEvent)
                   {
                       _activateToMove = true;
@@ -69,14 +69,16 @@ namespace WebGame
           }
 
           private void OnTriggerExit(Collider coll)
-          {
+          {   
+              //Hidden Object
               if (_eventsEnum == EventsTypes.ShowEvent && coll.CompareTag("Player"))
                     ToShow(false);
           }
           private void ToMove(Transform _originObject, Transform _destination1, Transform _destination2, float _velocity )
           {
               if (_activateToMove)
-              {
+              {   
+                  //Move forware
                   if (_originObject.position.x > _destination1.position.x )
                   {
                         _originObject.position = new Vector3(_originObject.position.x - _velocity * Time.deltaTime,
@@ -87,7 +89,8 @@ namespace WebGame
                         _activateToMove = false;
               }
               else
-              {
+              {   
+                  // move back
                   if (_originObject.position.x < _destination2.position.x)
                   {
                        _originObject.position = new Vector3(_originObject.position.x + _velocity * Time.deltaTime,

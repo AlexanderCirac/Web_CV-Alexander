@@ -3,10 +3,9 @@ using UnityEngine.SceneManagement;
 
 namespace WebGame
 { 
-    public class SC_InGameControllerWebgame : MonoBehaviour
+    public class SC_InGameControllerWebGame : MonoBehaviour
     {
          #region UnityCall
-        // Update is called once per frame
         void Update()
         {
             //Load to level's WebPage
