@@ -46,25 +46,29 @@ namespace WebGame
           private void OnTriggerEnter(Collider coll)
           {
               if (coll.CompareTag("Player"))
-              { 
-                  //Open URL
-                  if (_eventsEnum == EventsTypes.UrlEvent)
-                      Application.OpenURL(_urlText);
-                  
-                  //Teleporting
-                  if (_eventsEnum == EventsTypes.TeleportEvent && _positionTeleportObject != null)
-                      coll.transform.position = _positionTeleportObject.transform.position;
-
-                  //Move object
-                  if (_eventsEnum == EventsTypes.PushEvent)
+              {
+                  switch (_eventsEnum)
                   {
-                      _activateToMove = true;
-                      OnMovment += ToMove;
-                  }
+                      //Open URL
+                      case EventsTypes.UrlEvent:
+                          Application.OpenURL(_urlText);
+                          break;
 
-                  //Show Object
-                  if (_eventsEnum == EventsTypes.ShowEvent)
-                       ToShow(true);
+                      //Teleporting
+                      case EventsTypes.TeleportEvent:
+                          coll.transform.position = _positionTeleportObject.transform.position;
+                          break;
+                      //Move object
+                      case EventsTypes.PushEvent:
+                          _activateToMove = true;
+                          OnMovment += ToMove;
+                          break;
+
+                      //Show Object
+                      case EventsTypes.ShowEvent:
+                          ToShow(true);
+                          break;
+                  }
               }
           }
 
