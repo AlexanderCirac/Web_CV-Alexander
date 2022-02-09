@@ -52,22 +52,22 @@ namespace WebGame
                       //Open URL
                       case EventsTypes.UrlEvent:
                           Application.OpenURL(_urlText);
-                          break;
+                          return;
 
                       //Teleporting
                       case EventsTypes.TeleportEvent:
                           coll.transform.position = _positionTeleportObject.transform.position;
-                          break;
+                          return;
                       //Move object
                       case EventsTypes.PushEvent:
                           _activateToMove = true;
                           OnMovment += ToMove;
-                          break;
+                          return;
 
                       //Show Object
                       case EventsTypes.ShowEvent:
                           ToShow(true);
-                          break;
+                          return;
                   }
               }
           }
