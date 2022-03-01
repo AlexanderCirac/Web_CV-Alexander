@@ -31,11 +31,7 @@ namespace WebGame
           #region UnityCalls
           void Start()
           {
-                if(_eventsEnum == EventsTypes.ShowEvent)
-                    _showObjects.SetActive(false);
-
-                if(_eventsEnum == EventsTypes.PushEvent)
-                    _initialPos = _variablsToMove._moveObject.transform.position.x;
+              Initialize(_eventsEnum);
 
           }          
           void Update()
@@ -47,6 +43,21 @@ namespace WebGame
           #endregion
 
           #region Methods
+          private void Initialize(EventsTypes eventsTypes)
+          {
+                  switch (eventsTypes)
+                  {
+                      //Move object
+                      case EventsTypes.PushEvent:
+                          _initialPos = _variablsToMove._moveObject.transform.position.x;
+                          return;
+
+                      //Show Object
+                      case EventsTypes.ShowEvent:
+                          _showObjects.SetActive(false);
+                          return;
+                  }
+          }
           private void OnTriggerEnter(Collider coll)
           {
               if (coll.CompareTag("Player"))
