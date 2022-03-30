@@ -6,11 +6,11 @@ namespace WebGame
     public class SC_EventsCollision : MonoBehaviour
     {
           #region Attributes
-          [SerializeField] private EventsTypes _eventsEnum;
+          [SerializeField]  EventsTypes _eventsEnum;
           [Header("URL Event")]
-          [SerializeField] private string _urlText = "";
+          [SerializeField]  string _urlText = "";
           [Header("Teleport Event")]
-          [SerializeField] private GameObject _positionTeleportObject;          
+          [SerializeField]  GameObject _positionTeleportObject;          
           [System.Serializable] public class VariableType2 {
                 public GameObject _moveObject;
                 public float _lenght = 0;
@@ -18,11 +18,11 @@ namespace WebGame
            }
 
           [Header("Push Event")]
-          [SerializeField] private VariableType2 _variablsToMove;
+          [SerializeField]  VariableType2 _variablsToMove;
           [Header("Show Event")]
-          [SerializeField] private GameObject _showObjects;
+          [SerializeField]  GameObject _showObjects;
 
-          private float _initialPos;
+          float _initialPos;
 
           //Events 
           public event Action<Transform, float , float> OnMovment;
@@ -54,7 +54,7 @@ namespace WebGame
 
                       //Show Object
                       case EventsTypes.ShowEvent:
-                          _showObjects.SetActive(false);
+                          ToShow = false;
                           return;
                   }
           }
@@ -81,7 +81,9 @@ namespace WebGame
 
                       //Show Object
                       case EventsTypes.ShowEvent:
-                          ToShow(true);
+                          ToShow = true;
+                          return;
+                      default :
                           return;
                   }
               }
@@ -90,24 +92,27 @@ namespace WebGame
           private void OnTriggerExit(Collider coll)
           {   
               //Hidden Object
-              if (_eventsEnum == EventsTypes.ShowEvent && coll.CompareTag("Player"))
-                    ToShow(false);              
-
+              if (coll.CompareTag("Player"))
+                    ToShow = false;              
           }
           private void ToMove(Transform _originObject, float _lenght, float _velocity )
           {
-                  _originObject.position = new Vector3(_initialPos - (Mathf.PingPong(Time.time * _velocity, _lenght) - 0.5f * _lenght), _originObject.position.y, _originObject.position.z); ;
-              
-                  if (_originObject.position.x > _initialPos *2 )
-                  {
-                      _originObject.position = new Vector3(_initialPos, _originObject.position.y, _originObject.position.z);
+ 
+                      _originObject.position = _originObject.position.x > _initialPos * 2 ?  new Vector3(_initialPos, _originObject.position.y, _originObject.position.z) : new Vector3(_initialPos - (Mathf.PingPong(Time.time * _velocity, _lenght) - 0.5f * _lenght), _originObject.position.y, _originObject.position.z);
+                      
+                      if(_originObject.position.x > _initialPos * 2)
                       OnMovment -= ToMove;
-                  }
+                  
           }
-          private void ToShow(bool _boolShow) 
-          { 
-              _showObjects.SetActive(_boolShow);
+          private bool ToShow
+          {
+              set
+              {     
+                  if(value && _eventsEnum == EventsTypes.ShowEvent)
+                      _showObjects.SetActive(value);
+              }
           }
+          
           #endregion
     }
 }

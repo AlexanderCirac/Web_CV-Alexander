@@ -8,15 +8,15 @@ namespace WebPage.UI
     {     
           #region Attributes
           [Header("Buttons")]
-          [SerializeField] private Button _menuButton;
-          [SerializeField] private Button _webGameButton;
+          [SerializeField] Button _menuButton;
+          [SerializeField] Button _webGameButton;
           [System.Serializable] public class URL {
                 public string _name;
                 public Button _urlButton;
                 public string _urlText;
            }
           [Header("URL")]
-          [SerializeField] private URL[] _variablesToOpenURL;
+          [SerializeField]  URL[] _variablesToOpenURL;
           #endregion          
 
           #region UnityCalls

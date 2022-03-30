@@ -14,7 +14,7 @@ namespace WebPage.UI
             public int _iDLevel;
           }
           [Header("Buttons")]
-          [SerializeField] private ButtonToChargeLevel[] _variableToChargeLevel;
+          [SerializeField] ButtonToChargeLevel[] _variableToChargeLevel;
           #endregion
 
           #region UnityCalls
