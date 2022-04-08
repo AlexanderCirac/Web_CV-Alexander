@@ -20,8 +20,12 @@ namespace WebPage.UI
           #endregion          
 
           #region UnityCalls
-          void Start()
-          {   
+          void Awake () => Init();
+          #endregion
+
+          #region Methods
+          private void Init()
+          {
               //Button onClick
               _menuButton.onClick.AddListener(() => SceneManager.LoadScene(1));
               _webGameButton.onClick.AddListener(() => SceneManager.LoadScene(5));
@@ -34,5 +38,5 @@ namespace WebPage.UI
               }
           }
           #endregion
-  }
+    }
 }

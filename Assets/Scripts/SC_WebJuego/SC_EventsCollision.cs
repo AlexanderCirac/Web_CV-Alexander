@@ -29,21 +29,19 @@ namespace WebGame
           #endregion
           
           #region UnityCalls
-          void Start()
-          {
-              Initialize(_eventsEnum);
-
-          }          
-          void Update()
-          {
-              if (OnMovment != null)
-                    OnMovment(_variablsToMove._moveObject.transform, _variablsToMove._lenght
-                      ,_variablsToMove._velocity);
+          void Awake() => Init(_eventsEnum);
+      
+          void Update() => OnMovment?.Invoke(_variablsToMove._moveObject.transform, _variablsToMove._lenght,_variablsToMove._velocity);
+          private void OnTriggerExit(Collider coll)
+          {   
+              //Hidden Object
+              if (coll.CompareTag("Player"))
+                    ToShow = false;              
           }
           #endregion
 
           #region Methods
-          private void Initialize(EventsTypes eventsTypes)
+          private void Init(EventsTypes eventsTypes)
           {
                   switch (eventsTypes)
                   {
@@ -87,13 +85,6 @@ namespace WebGame
                           return;
                   }
               }
-          }
-
-          private void OnTriggerExit(Collider coll)
-          {   
-              //Hidden Object
-              if (coll.CompareTag("Player"))
-                    ToShow = false;              
           }
           private void ToMove(Transform _originObject, float _lenght, float _velocity )
           {

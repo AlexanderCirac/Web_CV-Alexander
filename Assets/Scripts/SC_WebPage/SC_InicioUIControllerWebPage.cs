@@ -18,8 +18,12 @@ namespace WebPage.UI
           #endregion
 
           #region UnityCalls
-          void Start()
-          { 
+          void Awake() => Init();
+          #endregion
+
+          #region Methods
+          private void Init()
+          {
               //Start Game
               Cursor.visible = true;
               Cursor.lockState = CursorLockMode.None;

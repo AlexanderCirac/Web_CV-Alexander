@@ -9,10 +9,7 @@ namespace WebGame
         void Update()
         {
             //Load to level's WebPage
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                  SceneManager.LoadScene(1);
-            }
+            if (Input.GetKeyDown(KeyCode.Alpha1)) SceneManager.LoadScene(1);
         }
         #endregion
 
