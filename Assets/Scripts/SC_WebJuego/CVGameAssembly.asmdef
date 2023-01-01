@@ -1,0 +1,16 @@
+{
+    "name": "CVGameAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1269e139a44a18d4b9d9b236d8ee88b2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
