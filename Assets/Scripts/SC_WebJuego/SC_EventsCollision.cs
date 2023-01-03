@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-namespace WebGame
+namespace WebGame.Game
 {
     public class SC_EventsCollision : MonoBehaviour
     {

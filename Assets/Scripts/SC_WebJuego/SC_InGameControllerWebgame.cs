@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace WebGame
+namespace WebGame.Game
 {
     public class SC_InGameControllerWebGame : MonoBehaviour
     {

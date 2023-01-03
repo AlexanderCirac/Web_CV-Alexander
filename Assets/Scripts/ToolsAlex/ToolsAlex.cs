@@ -5,19 +5,11 @@ using UnityEngine;
 
 namespace AlexanderCA.Tools
 {
-
-    public class ToolsAlex : MonoBehaviour
+    public static class ToolsAlex
     {
-        // Start is called before the first frame update
-        void Start()
+        public static RectTransform GetRectTransform(this Transform t)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            return t as RectTransform;
         }
     }
 }
