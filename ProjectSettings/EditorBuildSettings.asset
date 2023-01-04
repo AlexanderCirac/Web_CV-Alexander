@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/WebPage/Presentacion.unity
     guid: 2a3d00625a48a3646989357d583abd4f
   - enabled: 1
-    path: Assets/Scenes/WebGame/Decoracion.unity
+    path: Assets/Scenes/WebGame/WebGame.unity
     guid: a17a1bc505e4f3e488c72c39af5d6970
   m_configObjects: {}

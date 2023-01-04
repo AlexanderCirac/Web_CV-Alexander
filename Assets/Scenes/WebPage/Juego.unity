@@ -2688,66 +2688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b74582888034224c848b908213aaa22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toReturnMenu: {fileID: 1166817163}
-  _toLoadWebGame: {fileID: 87396178}
-  _variablsURL:
-  - _name: Link_Rikcy
-    _buttonToURL: {fileID: 1886221775}
-    _textToURL: https://store.steampowered.com/app/1477900/Ricky_did_nothing_wrong/
-  - _name: video_Ricky
-    _buttonToURL: {fileID: 1478738577}
-    _textToURL: https://www.youtube.com/watch?v=1MrIaNC3KcA&t=1s
-  - _name: Link_Abeja
-    _buttonToURL: {fileID: 740598757}
-    _textToURL: https://www.kickstarter.com/projects/1594853949/enjambre-tacticas/
-  - _name: Video_Abejas
-    _buttonToURL: {fileID: 276477840}
-    _textToURL: https://www.youtube.com/watch?v=GdCeDkZaHpY
-  - _name: Link_Thorn
-    _buttonToURL: {fileID: 1900906752}
-    _textToURL: https://play.google.com/store/apps/details?id=alexander.cadetethorn
-  - _name: Video_Thotn
-    _buttonToURL: {fileID: 707095066}
-    _textToURL: https://www.youtube.com/watch?v=Qwg0UtW2HNc
-  - _name: LinK_Al
-    _buttonToURL: {fileID: 1010836115}
-    _textToURL: https://play.google.com/store/apps/details?id=com.alexandergames.alelaprendiz
-  - _name: Video_Practica-1
-    _buttonToURL: {fileID: 591099361}
-    _textToURL: https://www.youtube.com/watch?v=QocQTQFADAk&t=3s
-  - _name: video_practica-2
-    _buttonToURL: {fileID: 903285004}
-    _textToURL: https://www.youtube.com/watch?v=RlA7a5icz6A
-  - _name: Video_practica_3
-    _buttonToURL: {fileID: 293404998}
-    _textToURL: https://www.youtube.com/watch?v=P77zP81hujE&t=1s
-  - _name: Link_Asset
-    _buttonToURL: {fileID: 890145910}
-    _textToURL: https://www.youtube.com/watch?v=P77zP81hujE&t=1s
-  - _name: Video_Asset
-    _buttonToURL: {fileID: 1851461015}
-    _textToURL: https://www.youtube.com/watch?v=5R65JjY_pvM
-  - _name: Link_Jam
-    _buttonToURL: {fileID: 549150184}
-    _textToURL: https://ziababs.itch.io/space-less-odyssey
-  - _name: Video_Jam
-    _buttonToURL: {fileID: 936519061}
-    _textToURL: https://www.youtube.com/watch?v=3-6Wf65uaAE
-  - _name: Link_Primero
-    _buttonToURL: {fileID: 809706294}
-    _textToURL: https://alexandercirac.itch.io/primeros-pasos
-  - _name: Video_Primero
-    _buttonToURL: {fileID: 309373596}
-    _textToURL: https://www.youtube.com/watch?v=r7ngZpomsJk
-  - _name: Link_Fallo
-    _buttonToURL: {fileID: 2072707981}
-    _textToURL: https://alexandercirac.itch.io/prueba-blackmouthgame
-  - _name: Video_Fallo
-    _buttonToURL: {fileID: 243900038}
-    _textToURL: https://www.youtube.com/watch?v=8N7iBTVOqmI
-  - _name: Video_AL
-    _buttonToURL: {fileID: 564331872}
-    _textToURL: https://www.youtube.com/watch?v=QSVEGbaW9cY
+  _menuButton: {fileID: 0}
+  _webGameButton: {fileID: 0}
+  _variablesToOpenURL: []
 --- !u!4 &384180581
 Transform:
   m_ObjectHideFlags: 0
@@ -2755,12 +2698,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384180579}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 408.52127, y: 61.72371, z: -34.72721}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 451825855}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385241987
 GameObject:
@@ -3232,6 +3175,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421283053}
   m_CullTransparentMesh: 1
+--- !u!1 &451825854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451825855}
+  m_Layer: 0
+  m_Name: Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451825855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451825854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 384180581}
+  m_Father: {fileID: 1527869390}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &462581146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,7 +5635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17300001, y: 0.79}
   m_AnchorMax: {x: 0.28100002, y: 0.8954294}
-  m_AnchoredPosition: {x: 0, y: 0.40000916}
+  m_AnchoredPosition: {x: 0, y: 0.4000244}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &646656564
@@ -6329,12 +6303,44 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726648309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1527869390}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &732819318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 732819319}
+  m_Layer: 0
+  m_Name: ---------UI-----------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &732819319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732819318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1323266336}
+  - {fileID: 1079983763}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740598754
 GameObject:
@@ -9096,8 +9102,8 @@ Transform:
   m_LocalPosition: {x: 254, y: 143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 732819319}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1125612041
 GameObject:
@@ -11129,8 +11135,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1811894960}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 732819319}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12064,6 +12070,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1527869389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527869390}
+  m_Layer: 0
+  m_Name: ---------Game--------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527869390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527869389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 726648312}
+  - {fileID: 1848644631}
+  - {fileID: 451825855}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530858273
 GameObject:
   m_ObjectHideFlags: 0
@@ -14209,6 +14248,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1848644630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848644631}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848644631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848644630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1527869390}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1851461013
 GameObject:
   m_ObjectHideFlags: 0
