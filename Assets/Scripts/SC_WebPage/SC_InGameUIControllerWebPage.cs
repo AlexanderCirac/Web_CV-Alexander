@@ -2,6 +2,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
+
 namespace WebPage.Page.UI
 {
     public class SC_InGameUIControllerWebPage : MonoBehaviour
