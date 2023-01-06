@@ -24,8 +24,8 @@ namespace WebGame.Game.Inputs
             var uniRXUpdate = Observable.EveryUpdate();
             uniRXUpdate.Where(_ => Input.GetAxis("Horizontal") != 0 || Input.GetAxisRaw("Horizontal") != 0);
             uniRXUpdate.Subscribe(_ => ToMovementController(delegateInputsMovement));
-            uniRXUpdate.Where(_ => Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick1Button0));
-            uniRXUpdate.Subscribe(_ => ToJumpController(delegateInputsJump));
+            //uniRXUpdate.Where(_ => Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick1Button0));
+            //uniRXUpdate.Subscribe(_ => ToJumpController(delegateInputsJump));
         }
         #endregion
 
@@ -38,9 +38,13 @@ namespace WebGame.Game.Inputs
 
         void ToMovementController(MydelegateMovement _mydelegateMovement)
         {
-            if ( Input.GetAxis("Horizontal") != 0 || Input.GetAxisRaw("Horizontal") != 0 )
+            if ( Input.GetAxis("Vertical") != 0 || Input.GetAxisRaw("Vertical") != 0 || Input.GetAxis("Mouse X") != 0)
+            {
                 _mydelegateMovement?.Invoke(ToolsAlex.GetMoveNormal3D());
+                Debug.Log("2");
+            }
         }
+
         #endregion
     }
 }
