@@ -12,20 +12,21 @@ namespace WebGame.Game.Inputs
         #region Attributes
         //control imputs
         internal delegate void MydelegateMovement(Vector3 _moveInput3D);
-        internal MydelegateMovement delegateInputsMovement;
+        internal MydelegateMovement _delegateInputsMovement;        
+        
+        internal delegate void MydelegateRotate(Vector3 _moveInput3D);
+        internal MydelegateRotate _delegateInputsRotate;
 
         internal delegate void MydelegateJump();
-        internal MydelegateJump delegateInputsJump;
+        internal MydelegateJump _delegateInputsJump;
         #endregion
 
         #region UnityCalls       
-        void Start()
+        void Update()
         {
-            var uniRXUpdate = Observable.EveryUpdate();
-            uniRXUpdate.Where(_ => Input.GetAxis("Horizontal") != 0 || Input.GetAxisRaw("Horizontal") != 0);
-            uniRXUpdate.Subscribe(_ => ToMovementController(delegateInputsMovement));
-            //uniRXUpdate.Where(_ => Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Joystick1Button0));
-            //uniRXUpdate.Subscribe(_ => ToJumpController(delegateInputsJump));
+            ToMovementController(_delegateInputsMovement);
+            ToRotateController(_delegateInputsRotate);
+            
         }
         #endregion
 
@@ -38,13 +39,19 @@ namespace WebGame.Game.Inputs
 
         void ToMovementController(MydelegateMovement _mydelegateMovement)
         {
-            if ( Input.GetAxis("Vertical") != 0 || Input.GetAxisRaw("Vertical") != 0 || Input.GetAxis("Mouse X") != 0)
+            if ( Input.GetAxis("Vertical") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
                 _mydelegateMovement?.Invoke(ToolsAlex.GetMoveNormal3D());
-                Debug.Log("2");
             }
         }
 
+        void ToRotateController(MydelegateRotate _delegateInputsRotate)
+        {
+            if( Mathf.Abs( Input.GetAxis("Mouse X") ) > 0 )
+            {
+                _delegateInputsRotate?.Invoke(ToolsAlex.GetMoveNormal3D());
+            }
+        }
         #endregion
     }
 }
