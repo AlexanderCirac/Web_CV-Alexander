@@ -30,10 +30,9 @@ namespace WebGame.Game.Inputs
         #region privats customs methods
         void MovePlayer(Vector3 _move)
         {
-            float moveSpeed = 5 * Time.deltaTime;
+            float moveSpeed = Input.GetKey(KeyCode.LeftShift) ? 10 * Time.deltaTime : 5 * Time.deltaTime;
             player.transform.Translate(Vector3.forward * _move.x * moveSpeed);
         }
-
         void RotatePlayer(Vector3 _move)
         {
             float rotateSpeed = 180 * Time.deltaTime;
