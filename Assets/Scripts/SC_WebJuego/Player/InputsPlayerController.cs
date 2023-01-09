@@ -6,7 +6,7 @@ using UniRx;
 namespace WebGame.Game.Inputs
 {
     using AlexanderCA.Tools;
-    public class InputsController : MonoBehaviour
+    public class InputsPlayerController : MonoBehaviour
     {
 
         #region Attributes
@@ -26,6 +26,7 @@ namespace WebGame.Game.Inputs
         {
             ToMovementController(_delegateInputsMovement);
             ToRotateController(_delegateInputsRotate);
+            ToJumpController(_delegateInputsJump);
             
         }
         #endregion
@@ -34,7 +35,10 @@ namespace WebGame.Game.Inputs
         void ToJumpController(MydelegateJump _myDelegateJump)
         {
             if ( Input.GetKeyDown(KeyCode.Space) )
+            {
                 _myDelegateJump?.Invoke();
+                Debug.Log("1");
+            }
         }
 
         void ToMovementController(MydelegateMovement _mydelegateMovement)
