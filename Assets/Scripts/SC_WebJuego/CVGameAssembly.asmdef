@@ -2,7 +2,8 @@
     "name": "CVGameAssembly",
     "rootNamespace": "",
     "references": [
-        "GUID:1269e139a44a18d4b9d9b236d8ee88b2"
+        "GUID:1269e139a44a18d4b9d9b236d8ee88b2",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
