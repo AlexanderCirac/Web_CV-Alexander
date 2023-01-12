@@ -37,7 +37,6 @@ namespace WebGame.Game.Inputs
             if ( Input.GetKeyDown(KeyCode.Space) )
             {
                 _myDelegateJump?.Invoke();
-                Debug.Log("1");
             }
         }
 
