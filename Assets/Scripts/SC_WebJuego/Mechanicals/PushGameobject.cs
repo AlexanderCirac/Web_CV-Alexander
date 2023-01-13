@@ -6,38 +6,34 @@ using UniRx;
 namespace WebGame.Game.Mechanical
 {
     using WebGame.Game;
-    public class PushGameobject : MonoBehaviour/*, IEventCollider*/
+    public class PushGameobject : MonoBehaviour, IEventCollider
     {
 
-
         #region Attributes
-        Vector3 _posInt;
+        [SerializeField] private GameObject _elementMove;
+        private Vector3 _initPose;
         #endregion
 
-        #region UnityCalls
-        // Start is called before the first frame update
-         
-        void OnTriggerEnter(Collider col) {
+        #region unitycalls
+        void Awake()
+        {
+            _initPose = _elementMove.transform.position;
+        }
+        #endregion
+        #region private custom methods
 
-            if ( col.CompareTag("Player") )
-            {
-                ToEventCollider(EventsTypes.PushEvent);
-                _posInt = this.transform.position;
-
-            }
-        }       
-        void OnTriggerExit(Collider col) {
-
-            this.transform.position = _posInt;
+        void IEventCollider.ToEnterEventCollider()
+        {
+        }
+        void IEventCollider.ToStayEventCollider()
+        {
+            _elementMove.transform.position = new Vector3(_initPose.x -(Mathf.PingPong(Time.time *1* Time.deltaTime, 5)),_elementMove.transform.position.y,_elementMove.transform.position.z);
         }
 
-        #endregion
 
-        #region Methods
-
-        public void ToEventCollider(EventsTypes a)
+        void IEventCollider.ToExitEventCollider()
         {
-            this.transform.position = new Vector3(Mathf.PingPong(-5 , 5) , this.transform.position.y , this.transform.position.x);
+            _elementMove.transform.position = _initPose;
         }
         #endregion
     }

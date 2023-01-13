@@ -1,16 +1,23 @@
 using UnityEngine;
 
-public interface IEventCollider
-{
-    void ToEnterEventCollider();
-    void ToExitEventCollider();
-}
 namespace WebGame.Game
 {
+public interface IEventCollider
+{
+    public void ToStayEventCollider();
+    public void ToEnterEventCollider();
+    public void ToExitEventCollider();
+}
     public class Player : MonoBehaviour
     {
 
         #region UnityCalls
+        private void OnTriggerStay(Collider other)
+        {
+
+            if ( other.TryGetComponent(out IEventCollider IeventCollider) )
+                IeventCollider.ToStayEventCollider();
+        }        
         private void OnTriggerEnter(Collider other)
         {
 
