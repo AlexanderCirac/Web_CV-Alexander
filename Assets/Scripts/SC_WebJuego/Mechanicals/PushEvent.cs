@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UniRx;
 
 namespace WebGame.Game.Mechanical
 {
     using WebGame.Game;
-    public class PushGameobject : MonoBehaviour, IEventCollider
+    public class PushEvent : MonoBehaviour, IEventCollider
     {
 
         #region Attributes
@@ -22,7 +19,7 @@ namespace WebGame.Game.Mechanical
         #endregion
         #region private custom methods
 
-        void IEventCollider.ToEnterEventCollider()
+        void IEventCollider.ToEnterEventCollider(GameObject _player)
         {
         }
         void IEventCollider.ToStayEventCollider()

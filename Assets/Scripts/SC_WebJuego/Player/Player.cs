@@ -5,7 +5,7 @@ namespace WebGame.Game
 public interface IEventCollider
 {
     public void ToStayEventCollider();
-    public void ToEnterEventCollider();
+    public void ToEnterEventCollider(GameObject _player);
     public void ToExitEventCollider();
 }
     public class Player : MonoBehaviour
@@ -22,7 +22,7 @@ public interface IEventCollider
         {
 
             if ( other.TryGetComponent(out IEventCollider IeventCollider) )
-                IeventCollider.ToEnterEventCollider();
+                IeventCollider.ToEnterEventCollider(this.gameObject);
         }
         private void OnTriggerExit(Collider other)
         {
