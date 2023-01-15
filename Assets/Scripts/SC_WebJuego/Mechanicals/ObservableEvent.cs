@@ -3,22 +3,24 @@ using UnityEngine;
 namespace WebGame.Game.Mechanical
 {
     using WebGame.Game;
-    public class TeleportEvent : MonoBehaviour, IEventCollider
+    public class ObservableEvent : MonoBehaviour, IEventCollider
     {
         #region Attributes
-        [SerializeField] private GameObject _destiniTeleport;
+        [SerializeField] private GameObject _elementObservable;
         #endregion
+
 
         #region private custom methods
         void IEventCollider.ToEnterEventCollider(GameObject _player)
         {
-            _player.transform.position = _destiniTeleport.transform.position;
+            _elementObservable.SetActive(true);
         }
         void IEventCollider.ToStayEventCollider()
-        {          
+        {
         }
         void IEventCollider.ToExitEventCollider()
-        {          
+        {
+            _elementObservable.SetActive(false);
         }
         #endregion
     }
