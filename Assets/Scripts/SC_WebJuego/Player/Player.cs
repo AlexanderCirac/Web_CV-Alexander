@@ -22,7 +22,10 @@ public interface IEventCollider
         {
 
             if ( other.TryGetComponent(out IEventCollider IeventCollider) )
-                IeventCollider.ToEnterEventCollider(this.gameObject);
+            {
+                IeventCollider.ToEnterEventCollider(this.transform.parent.gameObject);
+                Debug.Log("1");
+            }
         }
         private void OnTriggerExit(Collider other)
         {
