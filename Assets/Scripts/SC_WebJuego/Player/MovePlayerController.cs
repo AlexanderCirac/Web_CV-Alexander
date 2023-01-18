@@ -36,8 +36,13 @@ namespace WebGame.Game.Inputs
         }
         void RotatePlayer(Vector3 _move)
         {
-            float _rotateSpeed = 180 * Time.deltaTime;
-            _player.transform.Rotate(Vector3.up * _move.y * _rotateSpeed , Space.Self);
+            float _rotateSpeed = 300 * Time.deltaTime;
+            Debug.Log(_player.transform.rotation.x);
+            _player.transform.Rotate(Vector3.up * _move.y * _rotateSpeed );
+            
+            //    _player.transform.Rotate(Vector3.left * _move.x * _rotateSpeed);
+            //_player.transform.eulerAngles.y = Mathf.Clamp(_player.transform.eulerAngles.y , -90 , 90);
+
         }
 
         void JumpPlayer()

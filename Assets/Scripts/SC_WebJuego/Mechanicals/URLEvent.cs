@@ -2,21 +2,21 @@ using UnityEngine;
 
 namespace WebGame.Game.Mechanical
 {
-    public class URLEvent : MonoBehaviour, IEventCollider
+    public class URLEvent : MonoBehaviour, IPlayerEventCollider
     {
         #region Attributes
         [SerializeField] private string _urlText;
         #endregion
 
         #region private custom methods
-        void IEventCollider.ToEnterEventCollider(GameObject _player)
+        void IPlayerEventCollider.ToEnterEventCollider(GameObject _player)
         {
             Application.OpenURL(_urlText);
         }
-        void IEventCollider.ToStayEventCollider()
+        void IPlayerEventCollider.ToStayEventCollider()
         {
         }
-        void IEventCollider.ToExitEventCollider()
+        void IPlayerEventCollider.ToExitEventCollider()
         {
         }
         #endregion

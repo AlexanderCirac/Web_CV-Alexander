@@ -3,7 +3,7 @@ using UnityEngine;
 namespace WebGame.Game.Mechanical
 {
     using WebGame.Game;
-    public class PushEvent : MonoBehaviour, IEventCollider
+    public class PushEvent : MonoBehaviour, IPlayerEventCollider
     {
 
         #region Attributes
@@ -19,16 +19,16 @@ namespace WebGame.Game.Mechanical
         #endregion
         #region private custom methods
 
-        void IEventCollider.ToEnterEventCollider(GameObject _player)
+        void IPlayerEventCollider.ToEnterEventCollider(GameObject _player)
         {
         }
-        void IEventCollider.ToStayEventCollider()
+        void IPlayerEventCollider.ToStayEventCollider()
         {
             _elementMove.transform.position = new Vector3(_initPose.x -(Mathf.PingPong(Time.time *1* Time.deltaTime, 5)),_elementMove.transform.position.y,_elementMove.transform.position.z);
         }
 
 
-        void IEventCollider.ToExitEventCollider()
+        void IPlayerEventCollider.ToExitEventCollider()
         {
             _elementMove.transform.position = _initPose;
         }

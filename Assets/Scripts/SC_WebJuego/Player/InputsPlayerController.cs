@@ -50,10 +50,11 @@ namespace WebGame.Game.Inputs
 
         void ToRotateController(MydelegateRotate _delegateInputsRotate)
         {
-            if( Mathf.Abs( Input.GetAxis("Mouse X") ) > 0 )
+            if( Mathf.Abs( Input.GetAxis("Mouse X") ) > 0 || Mathf.Abs(Input.GetAxis("Mouse Y")) > 0 )
             {
-                _delegateInputsRotate?.Invoke(ToolsAlex.GetMoveNormal3D());
+                _delegateInputsRotate?.Invoke(ToolsAlex.GetRotateNormal3D());
             }
+           
         }
         #endregion
     }
