@@ -3,7 +3,7 @@ using UnityEngine;
 namespace WebGame.Game.Mechanical
 {
     using WebGame.Game;
-    public class ObservableEvent : MonoBehaviour, IPlayerEventCollider
+    public class ObservableEvent : MonoBehaviour, IPlayerEnterCollider, IPlayerExitCollider
     {
         #region Attributes
         [SerializeField] private GameObject _elementObservable;
@@ -11,14 +11,12 @@ namespace WebGame.Game.Mechanical
 
 
         #region private custom methods
-        void IPlayerEventCollider.ToEnterEventCollider(GameObject _player)
+        void IPlayerEnterCollider.ToEnterEventCollider(GameObject _player)
         {
             _elementObservable.SetActive(true);
         }
-        void IPlayerEventCollider.ToStayEventCollider()
-        {
-        }
-        void IPlayerEventCollider.ToExitEventCollider()
+        
+        void IPlayerExitCollider.ToExitEventCollider()
         {
             _elementObservable.SetActive(false);
         }

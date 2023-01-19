@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace AlexanderCA.Tools
 {
+   
     public static class ToolsAlex
     {
         public static RectTransform GetRectTransform(this Transform t)
@@ -33,7 +34,6 @@ namespace AlexanderCA.Tools
             }
             return movementInput;
         }
-
         public static Vector2 GetMoveNormal2DSmooth(float _vlocity = 1)
         {
             Vector2 movementInput = Vector3.zero;
@@ -56,30 +56,40 @@ namespace AlexanderCA.Tools
             }
             return movementInput;
         }
-
-        public static Vector3 GetMoveNormal3D()
+        public static Vector3 GetMoveNormal3D(KeyCode _keyLeft , KeyCode _keyRight , KeyCode _keyFrontOf , KeyCode _keyBack)
         {
             Vector3 movementInput = Vector3.zero;
 
-            if ( Input.GetKey(KeyCode.W) || Input.GetAxisRaw("Vertical") > 0 )
+            if ( Input.GetKey(_keyFrontOf) )
             {
                 movementInput.x = 1;
             }
-            else if ( Input.GetKey(KeyCode.S) || Input.GetAxisRaw("Vertical") < 0 )
+            else if ( Input.GetKey(_keyBack) )
             {
                 movementInput.x = -1;
             }
-            if ( Input.GetKey(KeyCode.A) || Input.GetAxisRaw("Horizontal") > 0 )
+            if ( Input.GetKey(_keyRight) )
             {
-                movementInput.z = 1;
+                movementInput.y = 1;
             }
-            else if ( Input.GetKey(KeyCode.D) || Input.GetAxisRaw("Horizontal") < 0 )
+            else if ( Input.GetKey(_keyLeft) )
             {
-                movementInput.z = -1;
+                movementInput.y = -1;
             }
             return movementInput;
         }
-        public static Vector3 GetRotateNormal3D()
+        public static Vector3 GetJumpDown(KeyCode _inputJump)
+        {
+            Vector3 movementInput = Vector3.zero;
+
+            if ( Input.GetKeyDown(_inputJump) )
+            {
+                movementInput.z = 1;
+            }
+
+            return movementInput;
+        }
+        public static Vector3 GetRotateMouse3D()
         {
             Vector3 movementInput = Vector3.zero;
 
@@ -100,6 +110,14 @@ namespace AlexanderCA.Tools
                 movementInput.x = -1;
             }
             return movementInput;
+        }
+        public static bool GetBoolOverlapBox(LayerMask _maskGround , GameObject _whoCheckObject )
+        {
+            bool  _checkGround = false;
+
+            _checkGround = ( Physics.OverlapBox(_whoCheckObject.transform.position, _whoCheckObject.transform.localScale , Quaternion.identity  , _maskGround) ) != null;   
+
+            return _checkGround;
         }
     }
 }
