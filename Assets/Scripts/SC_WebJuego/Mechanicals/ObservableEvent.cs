@@ -9,13 +9,11 @@ namespace WebGame.Game.Mechanical
         [SerializeField] private GameObject _elementObservable;
         #endregion
 
-
         #region private custom methods
         void IPlayerEnterCollider.ToEnterEventCollider(GameObject _player)
         {
             _elementObservable.SetActive(true);
-        }
-        
+        }        
         void IPlayerExitCollider.ToExitEventCollider()
         {
             _elementObservable.SetActive(false);
