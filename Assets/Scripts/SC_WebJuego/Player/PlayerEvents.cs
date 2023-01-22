@@ -2,19 +2,8 @@ using UnityEngine;
 
 namespace WebGame.Game
 {
-    public interface IPlayerStayCollider
-    {
-        public void ToStayEventCollider();
-    }
-    public interface IPlayerEnterCollider
-    {
-        public void ToEnterEventCollider(GameObject _player);
-    }
-    public interface IPlayerExitCollider
-    {
-        public void ToExitEventCollider();
-    }
 
+using WebCV.Tools.Interface;
     public class PlayerEvents : MonoBehaviour
     {
         #region UnityCalls

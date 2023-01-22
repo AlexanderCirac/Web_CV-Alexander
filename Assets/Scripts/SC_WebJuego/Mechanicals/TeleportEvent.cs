@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WebGame.Game.Mechanical
 {
-    using WebGame.Game;
+    using WebCV.Tools.Interface;
     public class TeleportEvent : MonoBehaviour, IPlayerEnterCollider
     {
         #region Attributes

@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace WebGame.Game.Mechanical
 {
+    using WebCV.Tools.Interface;
     public class URLEvent : MonoBehaviour, IPlayerEnterCollider
     {
         #region Attributes

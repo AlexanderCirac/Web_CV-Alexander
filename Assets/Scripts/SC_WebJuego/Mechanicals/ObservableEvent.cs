@@ -3,6 +3,7 @@ using UnityEngine;
 namespace WebGame.Game.Mechanical
 {
     using WebGame.Game;
+    using WebCV.Tools.Interface;
     public class ObservableEvent : MonoBehaviour, IPlayerEnterCollider, IPlayerExitCollider
     {
         #region Attributes
