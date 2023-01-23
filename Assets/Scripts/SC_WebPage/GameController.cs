@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace WebPage
 {
-    using WebPage.Interfaces;
+    using WebCV.Tools.Interface;
     public class GameController : MonoBehaviour
     {
         #region Attributes

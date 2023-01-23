@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace WebPage
 {
-    using WebPage.Interfaces;
+    using WebCV.Tools.Interface;
     public class ButtonLoadLevel : MonoBehaviour, IActionButton
     {
         #region Attributes

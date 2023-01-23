@@ -14,4 +14,9 @@ namespace WebCV.Tools.Interface
     {
         public void ToExitEventCollider();
     }
+
+    public interface IActionButton
+    {
+        public void ButtonAction();
+    }
 }

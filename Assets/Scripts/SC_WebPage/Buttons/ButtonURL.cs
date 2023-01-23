@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace WebPage
 {
-    using WebPage.Interfaces;
+    using WebCV.Tools.Interface;
     public class ButtonURL : MonoBehaviour, IActionButton
     {
 
