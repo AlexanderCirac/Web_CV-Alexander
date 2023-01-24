@@ -9,11 +9,11 @@ namespace WebGame.Game.Inputs
     public class InputsMouseKeyboard : InputsBehaviour
     {
         [Range(1,100)]
-        public float senitivy;
-        public KeyCode _keyLeft;
-        public KeyCode _keyRight;
-        public KeyCode _keyFrontOf;
-        public KeyCode _keyBack;
+        [SerializeField] private float   _senitivy;
+        [SerializeField] private KeyCode _keyLeft;
+        [SerializeField] private KeyCode _keyRight;
+        [SerializeField] private KeyCode _keyFrontOf;
+        [SerializeField] private KeyCode _keyBack;
         public override float GetVertical()
         {
             return ToolsAlex.GetMoveNormal3D( _keyLeft, _keyRight , _keyFrontOf , _keyBack).y;
@@ -24,11 +24,11 @@ namespace WebGame.Game.Inputs
         }
         public override float GetRotationVertical()
         {
-            return ToolsAlex.GetRotateMouse3D().y* senitivy;
+            return ToolsAlex.GetRotateMouse3D().y* _senitivy;
         }       
         public override float GetRotationHorizontal()
         {
-            return ToolsAlex.GetRotateMouse3D().x* senitivy;
+            return ToolsAlex.GetRotateMouse3D().x* _senitivy;
         }
 
         public override float GetJump()

@@ -2,8 +2,7 @@ using UnityEngine;
 
 namespace WebGame.Game
 {
-
-using WebCV.Tools.Interface;
+    using WebCV.Tools.Interface;
     public class PlayerEvents : MonoBehaviour
     {
         #region UnityCalls

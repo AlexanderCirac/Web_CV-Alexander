@@ -13,11 +13,12 @@ namespace WebPage
         #region UnityCalls
         private void Start()
         {
-            for ( int _raidButtons = 1 ; _raidButtons <= _buttons.Length ; _raidButtons++ )
+            if ( _buttons.Length != 0 ) return;
+            for ( int _raidButtons = 0 ; _raidButtons <= _buttons.Length ; _raidButtons++ )
             {               
-                if ( _buttons[_raidButtons - 1].TryGetComponent(out IActionButton _iActionButton) )
+                if ( _buttons[_raidButtons].TryGetComponent(out IActionButton _iActionButton) )
                 {
-                    _buttons[_raidButtons - 1].onClick.AddListener(() => _iActionButton.ButtonAction());                   
+                    _buttons[_raidButtons].onClick.AddListener(() => _iActionButton.ButtonAction());                   
                 }
             }
         }

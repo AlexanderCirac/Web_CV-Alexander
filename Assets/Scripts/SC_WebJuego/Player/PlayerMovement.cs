@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace WebGame.Game.Inputs
 {
     public class PlayerMovement : MonoBehaviour
