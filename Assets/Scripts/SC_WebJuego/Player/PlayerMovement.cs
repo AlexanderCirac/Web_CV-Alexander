@@ -5,7 +5,7 @@ namespace WebGame.Game.Inputs
     public class PlayerMovement : MonoBehaviour
     {
         #region Attributes
-        private  Vector2                 _tunr;
+        private  Vector2                 _axisRot;
         public   InputsEventController   _inputsController;
         #endregion
 
@@ -35,10 +35,10 @@ namespace WebGame.Game.Inputs
         void ToRotate(float _moveX , float _moveY)
         {
             float _rotateSpeed = 180 * Time.deltaTime;
-            _tunr.x += _moveX * _rotateSpeed;
-            _tunr.y += _moveY * _rotateSpeed;
-            float _clampX = Mathf.Clamp(-_tunr.x , -40 , 20);
-            transform.localRotation = Quaternion.Euler(_clampX , _tunr.y , 0);
+            _axisRot.x += _moveX * _rotateSpeed;
+            _axisRot.y += _moveY * _rotateSpeed;
+            float _clampX = Mathf.Clamp(-_axisRot.x , -40 , 20);
+            transform.localRotation = Quaternion.Euler(_clampX , _axisRot.y , 0);
         }
         void ToJump()
         {

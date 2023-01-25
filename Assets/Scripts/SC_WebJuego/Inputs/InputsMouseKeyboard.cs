@@ -30,7 +30,6 @@ namespace WebGame.Game.Inputs
         {
             return ToolsAlex.GetRotateMouse3D().x* _senitivy;
         }
-
         public override float GetJump()
         {           
             return ToolsAlex.GetJumpDown(KeyCode.Space).z;
