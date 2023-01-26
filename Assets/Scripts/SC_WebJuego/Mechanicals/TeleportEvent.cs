@@ -6,6 +6,7 @@ namespace WebGame.Game.Mechanical
     public class TeleportEvent : MonoBehaviour, IPlayerEnterCollider
     {
         #region Attributes
+        [Header("Set Objecto to teleport player")]
         [SerializeField] private GameObject _destiniTeleport;
         #endregion
 

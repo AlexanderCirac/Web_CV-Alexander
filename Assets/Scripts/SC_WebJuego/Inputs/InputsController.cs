@@ -3,11 +3,11 @@ using UniRx;
 
 namespace WebGame.Game.Inputs
 {
-    public class InputsEventController : MonoBehaviour
+    public class InputsController : MonoBehaviour
     {
         #region Attributes
-        //Get current Input to cotroller
-        [SerializeField] private InputsBehaviour _inputs;
+        [Header("Get current Input to cotroller")]
+        [SerializeField] private InputsTemplates _inputs;
 
         //Events to call what do
         internal delegate  void  MydelegateMovement(float _x , float _y);

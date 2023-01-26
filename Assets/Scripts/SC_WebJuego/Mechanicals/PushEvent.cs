@@ -7,6 +7,7 @@ namespace WebGame.Game.Mechanical
     {
 
         #region Attributes
+        [Header("Set Objecto to move")]
         [SerializeField] private  GameObject  _elementMove;
                          private  Vector3     _initPose;
         #endregion

@@ -7,6 +7,7 @@ namespace WebPage
     public class ButtonLoadLevel : MonoBehaviour, IActionButton
     {
         #region Attributes
+        [Header("Sel Level to Loaded")]
         [SerializeField] private int  _idScene;
         #endregion
 

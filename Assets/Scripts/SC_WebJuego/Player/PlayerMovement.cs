@@ -5,8 +5,9 @@ namespace WebGame.Game.Inputs
     public class PlayerMovement : MonoBehaviour
     {
         #region Attributes
+        [Header("Get Inputs Controller")]
+        public   InputsController   _inputsController;
         private  Vector2                 _axisRot;
-        public   InputsEventController   _inputsController;
         #endregion
 
         #region UnityCalls     

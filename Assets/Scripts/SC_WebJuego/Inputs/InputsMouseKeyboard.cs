@@ -6,8 +6,9 @@ using UnityEngine;
 namespace WebGame.Game.Inputs
 {
     using AlexanderCA.Tools;
-    public class InputsMouseKeyboard : InputsBehaviour
+    public class InputsMouseKeyboard : InputsTemplates
     {
+        [Header("Set Keys to inputs")]
         [Range(1,100)]
         [SerializeField] private float   _senitivy;
         [SerializeField] private KeyCode _keyLeft;

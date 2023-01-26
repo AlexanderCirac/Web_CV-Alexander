@@ -6,6 +6,7 @@ namespace WebGame.Game.Mechanical
     public class ObservableEvent : MonoBehaviour, IPlayerEnterCollider, IPlayerExitCollider
     {
         #region Attributes
+        [Header("GameOjecto to set Active")]
         [SerializeField] private GameObject _elementObservable;
         #endregion
 

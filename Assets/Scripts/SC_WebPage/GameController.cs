@@ -7,6 +7,7 @@ namespace WebPage
     public class GameController : MonoBehaviour
     {
         #region Attributes
+        [Header("Set alls buttons to acction")]
         [SerializeField] private Button[]  _buttons;
         #endregion
 
