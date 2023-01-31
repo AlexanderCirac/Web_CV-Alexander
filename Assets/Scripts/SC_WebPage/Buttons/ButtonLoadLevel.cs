@@ -11,7 +11,7 @@ namespace WebPage
         [SerializeField] private int  _idScene;
         #endregion
 
-        #region UnityCalls
+        #region Interfaces
         void IActionButton.ButtonAction()
         {
             SceneManager.LoadScene(_idScene);

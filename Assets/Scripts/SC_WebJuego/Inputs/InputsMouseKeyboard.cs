@@ -6,6 +6,7 @@ using UnityEngine;
 namespace WebGame.Game.Inputs
 {
     using AlexanderCA.Tools;
+    using WebGame.Game.Templates;
     public class InputsMouseKeyboard : InputsTemplates
     {
         [Header("Set Keys to inputs")]
@@ -33,6 +34,7 @@ namespace WebGame.Game.Inputs
         }
         public override float GetJump()
         {           
+           
             return ToolsAlex.GetJumpDown(KeyCode.Space).z;
         }
     }

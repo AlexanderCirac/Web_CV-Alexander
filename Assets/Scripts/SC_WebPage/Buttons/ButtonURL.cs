@@ -12,7 +12,7 @@ namespace WebPage
 
         #endregion
 
-        #region UnityCalls
+        #region Interfaces
         void IActionButton.ButtonAction()
         {
             Application.OpenURL(_urlString);

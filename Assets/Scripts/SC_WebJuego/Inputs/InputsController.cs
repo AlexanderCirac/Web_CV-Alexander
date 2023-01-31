@@ -3,6 +3,7 @@ using UniRx;
 
 namespace WebGame.Game.Inputs
 {
+    using WebGame.Game.Templates;
     public class InputsController : MonoBehaviour
     {
         #region Attributes
