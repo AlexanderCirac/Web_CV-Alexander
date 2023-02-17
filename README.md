@@ -1,6 +1,10 @@
 # Web_CV-Alexander
 Link: https://alexandercirac.itch.io/web-alexander
 
+Vs_01: Project initial
+Vs_02: Refactor 01
+Vs_03: Refactor 02
+
 ESP: 
 
 ¡Ey, qué tal! Soy el maestro del juego, el artista de la programación y el mago del modelado 3D. Tengo dos formas de presentar mi CV: una como una página web que te dejará boquiabierto, y la otra como un juego interactivo donde puedes explorar mis habilidades como si fueras un héroe en busca del tesoro más valioso.
