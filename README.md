@@ -19,7 +19,7 @@ Aunque este sea un proyecto pequeño y el primero en subir en GitHub, he realiza
 
 En cuanto a mi metodología de trabajo, me gusta utilizar diversas herramientas para mantener el código limpio, ordenado y sencillo, así como para optimizarlo. Entre ellas, destacan UniRX y Znject, aunque sigo aprendiendo más sobre ellas. Me esfuerzo por mantener la organización tanto de las carpetas como del contenido de cada escena, y en cuanto al código, utilizo diversas técnicas, como "Assemblys", "Name space" y "Regions".
 
-Para optimizar el código, utilizo elementos como ScriptableObjects, herencias, eventos y delegates, corrutinas, Interfaces, structs y enums. Además, en este proyecto he implementado los patrones de diseño "En cascada" y "Observer". En definitiva, mi objetivo es crear un código de alta calidad y eficiencia, que sea fácil de entender y mantener en el futuro.
+Para optimizar el código, utilizo elementos como ScriptableObjects, herencias, eventos y delegates, corrutinas, Interfaces, structs y enums. Además, en este proyecto he implementado los patrones de diseño "En cascada" y "Templates". En definitiva, mi objetivo es crear un código de alta calidad y eficiencia, que sea fácil de entender y mantener en el futuro.
 
 Como dijo Albert Einstein: "La creatividad es contagiosa, pásala". En este sentido, creo que mi proyecto es un reflejo de mi pasión por la programación y mi compromiso por mejorar continuamente.
 
