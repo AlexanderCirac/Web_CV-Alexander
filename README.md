@@ -17,7 +17,7 @@ Aunque mi CV es serio y profesional, también tiene ese toque de humor que hace 
 
 Aunque este sea un proyecto pequeño y el primero en subir en GitHub, he realizado un gran esfuerzo en refactorizar el código con cada conocimiento adquirido, y seguiré haciéndolo para mejorar su eficiencia y expresar mis habilidades actuales y potenciales.
 
-En cuanto a mi metodología de trabajo, me gusta utilizar diversas herramientas para mantener el código limpio, ordenado y sencillo, así como para optimizarlo. Entre ellas, destacan UniRX y Znject, aunque sigo aprendiendo más sobre ellas. Me esfuerzo por mantener la organización tanto de las carpetas como del contenido de cada escena, y en cuanto al código, utilizo diversas técnicas, como "Assemblys", "Name space" y "Regions".
+En cuanto a mi metodología de trabajo, me gusta utilizar diversas herramientas para mantener el código limpio, ordenado y sencillo, así como para optimizarlo. Entre ellas, destacan UniRX y Znject, aunque sigo aprendiendo más sobre ellas. Me esfuerzo por mantener la organización tanto de las carpetas como del contenido de cada escena, y en cuanto al código, utilizo diversas técnicas, como "Assemblys", "Name space" y "Regions", en las regions solo utilizo como separador y odenar los Attributs, UnityCalls y la seccion de methods que tenga esa scritp, sin romper el single responsability. Cada scritp se encarga de su funcion sin tener 5000 methods ni 5000 lineas 
 
 Para optimizar el código, utilizo elementos como ScriptableObjects, herencias, eventos y delegates, corrutinas, Interfaces, structs y enums. Además, en este proyecto he implementado los patrones de diseño "En cascada" y "Templates". En definitiva, mi objetivo es crear un código de alta calidad y eficiencia, que sea fácil de entender y mantener en el futuro.
 
@@ -34,7 +34,7 @@ Although my CV is serious and professional, it also has that touch of humor that
 
 Although this is a small project and the first to be uploaded on GitHub, I have put a lot of effort into refactoring the code with each knowledge gained, and I will continue to do so to improve its efficiency and express my current and potential skills.
 
-Regarding my work methodology, I like to use various tools to keep the code clean, tidy and simple, as well as to optimize it. Among them, UniRX and Znject stand out, although I continue to learn more about them. I strive to keep both the folders and the content of each scene organized, and code-wise I use various techniques such as "Assemblies", "Name space" and "Regions".
+Regarding my work methodology, I like to use various tools to keep the code clean, tidy and simple, as well as to optimize it. Among them, UniRX and Znject stand out, although I continue to learn more about them. I strive to keep both the folders and the content of each scene organized, and code-wise I use various techniques such as "Assemblies", "Name space" and "Regions". In the regions I only use the Attributes, UnityCalls and the methods section that has that script as a separator and order, without breaking the single responsibility. Each script takes care of its function without having 5000 methods or 5000 lines
 
 To optimize the code, I use things like ScriptableObjects, inheritance, events and delegates, coroutines, Interfaces, structs and enums. Also, in this project I have implemented the "Cascading" and "Observer" design patterns. Ultimately, my goal is to create high quality and efficient code that is easy to understand and maintain in the future.
 
