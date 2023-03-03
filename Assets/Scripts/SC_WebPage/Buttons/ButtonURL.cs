@@ -9,7 +9,6 @@ namespace WebPage
         #region Attributes
         [Header("URL Link")]
         [SerializeField] private string  _urlString;
-
         #endregion
 
         #region Interfaces

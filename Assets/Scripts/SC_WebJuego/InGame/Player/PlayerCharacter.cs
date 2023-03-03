@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace WebGame.Game.Character
 {
-
     using WebGame.Game.Templates;
     public class PlayerCharacter : CharacterTemplate
     {
-
-        #region abstract customs methods
+        #region Abstract customs methods
         protected override void ToMovement()
         {
             float _moveSpeed = Input.GetKey(KeyCode.LeftShift) ? 10 * Time.deltaTime : 5 * Time.deltaTime;
@@ -19,13 +15,11 @@ namespace WebGame.Game.Character
         protected override void ToJumping()
         {
             float _jumpSpeed = 300 * Time.deltaTime;
-         
             GetComponent<Rigidbody>().velocity = ( Vector3.up * _jumpSpeed );
         }
-
         protected override void ToRotate()
         {
-            throw new System.NotImplementedException();
+            return;
         }
         #endregion
     }

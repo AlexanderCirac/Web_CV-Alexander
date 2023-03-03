@@ -9,7 +9,6 @@ namespace WebGame.Game
         #region UnityCall
         void Start()
         {
-
             Observable.EveryUpdate()
                 .Where(_ => Input.GetKeyDown(KeyCode.Alpha1))
                 .Subscribe(_ => { SceneManager.LoadScene(1); });

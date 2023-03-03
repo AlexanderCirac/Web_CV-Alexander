@@ -3,15 +3,14 @@ using UniRx;
 
 namespace WebGame.Game.Templates
 {
-
     public abstract class CharacterTemplate : MonoBehaviour
     {
         #region Attributes
+        [Header("Inputs to controller Character")]
         public InputsTemplates _inputs;
         #endregion
 
         #region UnityCalls
-
         private void Awake()
         {
             TryGetComponent(out _inputs);
@@ -22,15 +21,8 @@ namespace WebGame.Game.Templates
         }
         private void OnDestroy()
         {
-            _inputs._delegateInputsJump = ToJumping;
-            
+            _inputs._delegateInputsJump = ToJumping;            
         }
-        //private void Update()
-        //{
-        //    ToMovement();
-        //    ToJumping();
-        //    ToRotate();
-        //}
         #endregion
 
         #region abstract customs methods
