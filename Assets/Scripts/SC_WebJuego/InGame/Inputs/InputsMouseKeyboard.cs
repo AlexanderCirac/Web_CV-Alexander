@@ -1,42 +1,39 @@
 using UnityEngine;
+using Zenject;
 
 // Aqui indicaremos que el modulo de control sera mediante el uso de raton y teclado
 namespace WebGame.Game.Inputs
 {
     using AlexanderCA.Tools;
     using WebGame.Game.Templates;
+    using WebGame.Game.ScriptableObject;
     public class InputsMouseKeyboard : InputsTemplates
     {
         #region Attributes
-        [Header("Set Keys to inputs")]
-        [Range(1,100)]
-        [SerializeField] private float   _senitivy;
-        [SerializeField] private KeyCode _keyLeft;
-        [SerializeField] private KeyCode _keyRight;
-        [SerializeField] private KeyCode _keyFrontOf;
-        [SerializeField] private KeyCode _keyBack;
+        [Inject]
+        public SOPlayer _data;
         #endregion
 
         #region Abstract customs methods
         public override float GetVertical()
         {
-            return ToolsAlex.GetMoveNormal3D(_keyLeft , _keyRight , _keyFrontOf , _keyBack).y;
+            return ToolsAlex.GetMoveNormal3D(_data._keyLeft , _data._keyRight , _data._keyFrontOf , _data._keyBack).y;
         }
         public override float GetHorizontal()
         {
-            return ToolsAlex.GetMoveNormal3D(_keyLeft , _keyRight , _keyFrontOf , _keyBack).x;
+            return ToolsAlex.GetMoveNormal3D(_data._keyLeft , _data._keyRight , _data._keyFrontOf , _data._keyBack).x;
         }
         public override float GetRotationVertical()
         {
-            return ToolsAlex.GetRotateMouse3D().y * _senitivy;
+            return ToolsAlex.GetRotateMouse3D().y * _data._rotateSpeed;
         }
         public override float GetRotationHorizontal()
         {
-            return ToolsAlex.GetRotateMouse3D().x * _senitivy;
+            return ToolsAlex.GetRotateMouse3D().x * _data._rotateSpeed;
         }
         public override float GetJump()
         {
-            return ToolsAlex.GetJumpDown(KeyCode.Space).z;
+            return ToolsAlex.GetJumpDown(KeyCode.Space).z *_data._jumpsSpeed;
         }
         #endregion
     }

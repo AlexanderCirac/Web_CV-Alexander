@@ -1,11 +1,12 @@
 using Zenject;
-//using WebGame.Game.Templates;
+using WebGame.Game.ScriptableObject;
 
 public class InputsInstaller : MonoInstaller
 {
+    public SOPlayer _dataPlayer;
     public override void InstallBindings()
     {
         //var _inputsTemplates = GetComponent<InputsTemplates>();
-        //Container.BindInstance(_inputsTemplates).AsSingle();
+        Container.BindInstance(_dataPlayer).AsSingle();
     }
 }
