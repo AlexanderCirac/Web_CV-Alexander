@@ -8,7 +8,7 @@ V_02: Refactor 01 - Enums, Refactor name variables and methods, #regions, namesp
 
 V_03: Refactor 02 - SOLID,  Implement design patterns ( Observer, singleton, Templates), scriptable Object, begining to Zenject and UniRX, Generics, Refactor unity Events, Assemblys, Dinamic list, Interface, Class Helper, struct
 
-V_04: Refactor 03 - currently working (Plataform dependent compilation,  DRY principle, Implenet Class Editor, First steps in Zenject, Implement )
+V_04: Refactor 03 - currently working (Plataform dependent compilation,  DRY principle, Implenet Class Editor, First steps in Zenject, Implement Pro Menu System )
 
 ESP: 
 
