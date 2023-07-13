@@ -1,9 +1,14 @@
 # Web_CV-Alexander
 Link: https://alexandercirac.itch.io/web-alexander
 
-Vs_01: Project initial
-Vs_02: Refactor 01
-Vs_03: Refactor 02
+
+V_01: Initial proyect - amateur programmer
+
+V_02: Refactor 01 - Enums, Refactor name variables and methods, #regions, namespace, corrutina, restruct scritps and reorganize(Headers, space, correct lineation... ), Unity Events, Inheritance, Array, Plataform dependent compilation
+
+V_03: Refactor 02 - SOLID,  Implement design patterns ( Observer, singleton, Templates), scriptable Object, begining to Zenject and UniRX, Generics, Refactor unity Events, Assemblys, Dinamic list, Interface, Class Helper, struct
+
+V_04: Refactor 03 - currently working (Plataform dependent compilation,  DRY principle, Implenet Class Editor, First steps in Zenject)
 
 ESP: 
 
