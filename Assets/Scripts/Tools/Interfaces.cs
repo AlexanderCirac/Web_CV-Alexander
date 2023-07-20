@@ -18,5 +18,13 @@ namespace WebCV.Tools.Interface
     public interface IActionButton
     {
         public void ButtonAction();
+    }    
+    public interface IInputs
+    {
+        public float GetVertical();
+        public float GetHorizontal();
+        public float GetRotationVertical();
+        public float GetRotationHorizontal();
+        public float GetJump();
     }
 }
