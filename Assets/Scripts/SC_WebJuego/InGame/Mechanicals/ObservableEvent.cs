@@ -11,11 +11,11 @@ namespace WebGame.Game.Mechanical
         #endregion
 
         #region private custom methods
-        void IPlayerEnterCollider.ToEnterEventCollider(GameObject _player)
+        public void ToEnterEventCollider(GameObject _player)
         {
             _elementObservable.SetActive(true);
         }        
-        void IPlayerExitCollider.ToExitEventCollider()
+        public void ToExitEventCollider()
         {
             _elementObservable.SetActive(false);
         }

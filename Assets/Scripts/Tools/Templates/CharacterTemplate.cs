@@ -1,27 +1,43 @@
 using UnityEngine;
 using UniRx;
+using Zenject;
 
 namespace WebGame.Game.Templates
 {
+    using WebCV.Tools.Interface;
     public abstract class CharacterTemplate : MonoBehaviour
     {
         #region Attributes
         [Header("Inputs to controller Character")]
-        public InputsTemplates _inputs;
+        [Inject(Id ="Player")]
+        public IInputs _inputs;
+        #region Delegates 
+        public delegate void MydelegateMovement();
+        public MydelegateMovement _delegateInputsMovement { get; set; }
+
+        public delegate void MydelegateRotate();
+        public MydelegateRotate _delegateInputsRotate { get; set; }
+
+        public delegate void MydelegateJump();
+        public MydelegateJump _delegateInputsJump { get; set; }
+        #endregion
         #endregion
 
         #region UnityCalls
         private void Awake()
         {
-            TryGetComponent(out _inputs);
-            Observable.EveryUpdate().Where(_ => _inputs.GetJump() != 0).Subscribe(_ => _inputs._delegateInputsJump?.Invoke());
-            _inputs._delegateInputsJump += ToJumping;
-            Observable.EveryUpdate().Where(_ => _inputs.GetHorizontal() != 0 || _inputs.GetVertical() != 0).Subscribe(_ => _inputs._delegateInputsMovement?.Invoke());
-            Observable.EveryUpdate().Where(_ => _inputs.GetRotationHorizontal() != 0 || _inputs.GetRotationVertical() != 0).Subscribe(_ => _inputs._delegateInputsRotate?.Invoke());
+            Observable.EveryUpdate().Where(_ => _inputs.GetJump() != 0).Subscribe(_ => _delegateInputsJump?.Invoke());
+            _delegateInputsJump += ToJumping;
+            Observable.EveryUpdate().Where(_ => _inputs.GetHorizontal() != 0 || _inputs.GetVertical() != 0).Subscribe(_ => _delegateInputsMovement?.Invoke());
+            _delegateInputsMovement += ToMovement;
+            Observable.EveryUpdate().Where(_ => _inputs.GetRotationHorizontal() != 0 || _inputs.GetRotationVertical() != 0).Subscribe(_ => _delegateInputsRotate?.Invoke());
+            _delegateInputsRotate += ToRotate;
         }
         private void OnDestroy()
         {
-            _inputs._delegateInputsJump = ToJumping;            
+            _delegateInputsJump -= ToJumping;
+            _delegateInputsMovement -= ToMovement;
+            _delegateInputsRotate -= ToRotate;
         }
         #endregion
 

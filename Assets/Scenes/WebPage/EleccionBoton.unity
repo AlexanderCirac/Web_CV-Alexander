@@ -5259,6 +5259,7 @@ Transform:
   - {fileID: 1304176159}
   - {fileID: 54538682}
   - {fileID: 456309464}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5551,6 +5552,509 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &226819373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226819374}
+  - component: {fileID: 226819378}
+  - component: {fileID: 226819377}
+  - component: {fileID: 226819376}
+  - component: {fileID: 226819375}
+  m_Layer: 0
+  m_Name: ProMenuSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &226819374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226819373}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1664923051}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &226819375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226819373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6423a96fc6119a243b6a6482bede0d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explication:
+    _language:
+      "Espa\xF1ol":
+        "Explicaci\xF3n":
+          _a: 0
+        Uso:
+          _a: 0
+        Advertencia:
+          _a: 0
+      English:
+        Explanation:
+          _a: 0
+        Use:
+          _a: 0
+        Warning:
+          _a: 0
+--- !u!114 &226819376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226819373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d5de9c655570c47a56ac599b8bb0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explication:
+    _language:
+      "Espa\xF1ol":
+        "Explicaci\xF3n":
+          _a: 0
+        Uso:
+          _a: 0
+        Advertencia:
+          _a: 0
+      English:
+        Explanation:
+          _a: 0
+        Use:
+          _a: 0
+        Warning:
+          _a: 0
+  _content:
+    _use:
+      m_nivel: 0
+      _typeLoadBar: 0
+    _customization:
+      _advancing:
+        _isLoadingAutomatic: 0
+        _sliderOption: {fileID: 0}
+      _warning:
+        _warningPanel: {fileID: 0}
+        _warningSound: {fileID: 0}
+      _ending:
+        _isQuitAutomatic: 0
+        _quitButton: {fileID: 0}
+        _quitKey: 0
+        _quitJoystick: 0
+--- !u!114 &226819377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226819373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f81c9e0bd16dc4180919a12e519632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundFloat: []
+  _explication:
+    _language:
+      "Espa\xF1ol":
+        "Explicaci\xF3n":
+          _a: 0
+        Uso:
+          _a: 0
+        Advertencia:
+          _a: 0
+      English:
+        Explanation:
+          _a: 0
+        Use:
+          _a: 0
+        Warning:
+          _a: 0
+  contenido:
+    _option_0:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      m_Contenido:
+        _brightnessPanel: {fileID: 0}
+        _brightnesScrollbar: {fileID: 0}
+        _brightnesInt: 0
+    _option_1:
+      "m_Explicaci\xF3n":
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      m_Contenido:
+        m_Sonido: []
+    _option_2:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _camera: []
+        _contrastScrollbar: {fileID: 0}
+        _brightScrollbar: {fileID: 0}
+        _contrastFloat: 0
+        _brightFloat: 0
+    _option_3:
+      "m_Explicaci\xF3n":
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      m_Contenido:
+        _howApplyChanges:
+          _changeBotton: {fileID: 0}
+          _resetBotton: {fileID: 0}
+          _automatic: 0
+        _vsync:
+          _vsyncToggle: {fileID: 0}
+          _vsyncDefoult: 0
+        _shadowQuality:
+          _shadowDropdown: {fileID: 0}
+          _shadowDefoult: 0
+        _screenResolution:
+          _screenResolDropwdown: {fileID: 0}
+        _windowsMode:
+          _windowsToggle: {fileID: 0}
+          _windowsDefoult: 0
+        _grafics:
+          _graficDropdown: {fileID: 0}
+          _graficDefoult: 0
+        _antialasing:
+          _antialasingDropdown: {fileID: 0}
+          _antialasingDefoult: 0
+        _fps:
+          _fpsDropdown: {fileID: 0}
+          _fpsDefoult: 0
+    _option_4:
+      "m_Explicaci\xF3n":
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      m_Contenido:
+        _leftHandedToggle: {fileID: 0}
+        _leftHandedPanel: {fileID: 0}
+        _rightHandedPanel: {fileID: 0}
+--- !u!114 &226819378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226819373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3e31f6ba0f3864199a44945ec3e13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _listUnlockUI: 
+  _explication:
+    _language:
+      "Espa\xF1ol":
+        "Explicaci\xF3n":
+          _a: 0
+        Uso:
+          _a: 0
+        Advertencia:
+          _a: 0
+      English:
+        Explanation:
+          _a: 0
+        Use:
+          _a: 0
+        Warning:
+          _a: 0
+  _contenido:
+    _option0:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _quitButton: {fileID: 0}
+        _quitQuestion:
+          _questionPanel: {fileID: 0}
+          _showPanelButton: {fileID: 0}
+          _hiddenPanelButton: {fileID: 0}
+        _quitKey:
+          _joystickButton: 0
+          _keyButton: 0
+          _ownButton: 
+    _Option1:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _buttonsArray:
+        - _nameButton: Game
+          _iDLevel: 5
+          _loadButton: {fileID: 2035491603}
+          _loadQuestion:
+            _panelQuestion: {fileID: 0}
+            _showButton: {fileID: 0}
+            _hiddenButton: {fileID: 0}
+        - _nameButton: Web
+          _iDLevel: 1
+          _loadButton: {fileID: 1851930953}
+          _loadQuestion:
+            _panelQuestion: {fileID: 0}
+            _showButton: {fileID: 0}
+            _hiddenButton: {fileID: 0}
+    _Option2:
+      "_explicati\xF3n":
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        m_PanelMenu: {fileID: 0}
+        _buttonOptions:
+          _showButton: {fileID: 0}
+          _hiddeButton: {fileID: 0}
+        _keyOptions:
+          _key: 0
+          _joystick: 0
+          _ownButton: 
+        _isPauseGame: 0
+    _Option3:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+      _content:
+        _arrayURL: []
+    _Option4:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _arrayVideo: []
+    _Option5:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        m_Panel: []
+    _Option6:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _customDefault: []
+        _customButtons: []
+    _Option7:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _onFunction: 0
+        _defoultImage: {fileID: 0}
+        _onClickImage: {fileID: 0}
+        _panelIconVisualicer: {fileID: 0}
+        _animatorController: {fileID: 0}
+        _onDefoultAnim: {fileID: 0}
+        _onClickAnim: {fileID: 0}
+        m_posIcono: {x: 0, y: 0}
+        _isOnYoistick: 0
+        _yoistickBotton: 0
+    _Option8:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _unlockUIElements: []
+    _Option9:
+      _explication:
+        "Espa\xF1ol":
+          "Explicaci\xF3n":
+            _a: 0
+          Uso:
+            _a: 0
+          Advertencia:
+            _a: 0
+        English:
+          Explanation:
+            _a: 0
+          Use:
+            _a: 0
+          Warning:
+            _a: 0
+      _content:
+        _timersElements: []
 --- !u!1 &408868828
 GameObject:
   m_ObjectHideFlags: 0
@@ -10511,40 +11015,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.21, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1000685046}
-  m_Father: {fileID: 1664923051}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &549452728
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 549452729}
-  m_Layer: 0
-  m_Name: Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &549452729
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549452728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1664923051}
-  m_RootOrder: 1
+  m_Father: {fileID: 102560316}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583358047
 GameObject:
@@ -10839,36 +11312,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587696539}
   m_CullTransparentMesh: 1
---- !u!1 &611173076
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 611173077}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &611173077
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611173076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1664923051}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &733450739
 GameObject:
   m_ObjectHideFlags: 0
@@ -11009,52 +11452,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14185412}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1000685044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1000685046}
-  - component: {fileID: 1000685045}
-  m_Layer: 0
-  m_Name: InGameUIController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1000685045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000685044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b74582888034224c848b908213aaa22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _menuButton: {fileID: 0}
-  _webGameButton: {fileID: 0}
-  _variablesToOpenURL: []
---- !u!4 &1000685046
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000685044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 313.21, y: 170.5, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 519420032}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020883684
 GameObject:
@@ -26193,6 +26590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1664923051}
+  - component: {fileID: 1664923052}
   m_Layer: 0
   m_Name: ---------Game--------
   m_TagString: Untagged
@@ -26211,12 +26609,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 611173077}
-  - {fileID: 549452729}
-  - {fileID: 519420032}
+  - {fileID: 226819374}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1664923052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664923050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0ddb157f20ecb418f1791609453201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1704977907
 GameObject:
   m_ObjectHideFlags: 0

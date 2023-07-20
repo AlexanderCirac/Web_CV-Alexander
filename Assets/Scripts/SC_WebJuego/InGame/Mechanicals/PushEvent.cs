@@ -20,7 +20,7 @@ namespace WebGame.Game.Mechanical
         #endregion
 
         #region private custom methods
-        void IPlayerStayCollider.ToStayEventCollider()
+        public void ToStayEventCollider()
         {
             float _pinpong = (Mathf.PingPong(Time.time *1* Time.deltaTime, 5));
 
@@ -28,7 +28,7 @@ namespace WebGame.Game.Mechanical
                                                           _elementMove.transform.position.y,
                                                           _elementMove.transform.position.z);
         }
-        void IPlayerExitCollider.ToExitEventCollider()
+        public void ToExitEventCollider()
         {
             _elementMove.transform.position = _initPose;
         }

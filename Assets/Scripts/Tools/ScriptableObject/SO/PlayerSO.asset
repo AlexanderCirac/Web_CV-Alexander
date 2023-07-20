@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   _jumpsSpeed: 20
-  _rotateSpeed: 20
-  _movementSpeed: 40
+  _rotateSpeed: 10
+  _movementSpeed: 1000
+  _keyLeft: 97
+  _keyRight: 100
+  _keyFrontOf: 119
+  _keyBack: 115
+  _keyJump: 32
