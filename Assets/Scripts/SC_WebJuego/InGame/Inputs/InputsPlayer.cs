@@ -8,7 +8,6 @@ namespace WebGame.Game
     using WebGame.Game.ScriptableObject;
     using WebCV.Tools.Interface;
 
-    [Serializable]
     public class InputsPlayer : IInputs
     {
         #region Attributes

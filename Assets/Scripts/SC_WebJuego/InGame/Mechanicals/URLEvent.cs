@@ -6,7 +6,7 @@ namespace WebGame.Game.Mechanical
     public class URLEvent : MonoBehaviour, IPlayerEnterCollider
     {
         #region Attributes
-        [Header("URL Link")]
+        //URL Link"
         [SerializeField] private string _urlText;
         #endregion
 

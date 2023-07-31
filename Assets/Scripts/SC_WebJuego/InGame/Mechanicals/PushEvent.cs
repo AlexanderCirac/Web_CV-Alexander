@@ -7,14 +7,15 @@ namespace WebGame.Game.Mechanical
     {
 
         #region Attributes
-        [Header("Set Objecto to move")]
-        [SerializeField] private  GameObject  _elementMove;
-                         private  Vector3     _initPose;
+        //Set Objecto to move
+        private  GameObject    _elementMove;
+        private  Vector3     _initPose;
         #endregion
 
         #region unitycalls
         void Awake()
         {
+            _elementMove = this.transform.GetChild(0).gameObject;
             _initPose = _elementMove.transform.position;
         }
         #endregion
@@ -24,8 +25,8 @@ namespace WebGame.Game.Mechanical
         {
             float _pinpong = (Mathf.PingPong(Time.time *1* Time.deltaTime, 5));
 
-            _elementMove.transform.position = new Vector3(_initPose.x - _pinpong ,               
-                                                          _elementMove.transform.position.y,
+            _elementMove.transform.position = new Vector3(_initPose.x - _pinpong ,
+                                                          _elementMove.transform.position.y ,
                                                           _elementMove.transform.position.z);
         }
         public void ToExitEventCollider()

@@ -8,10 +8,10 @@ namespace WebGame.Game.Templates
     public abstract class CharacterTemplate : MonoBehaviour
     {
         #region Attributes
-        [Header("Inputs to controller Character")]
-        [Inject(Id ="Player")]
-        public IInputs _inputs;
-        #region Delegates 
+        [Inject] [HideInInspector]
+         public IInputs _inputs;
+
+        #region Events 
         public delegate void MydelegateMovement();
         public MydelegateMovement _delegateInputsMovement { get; set; }
 

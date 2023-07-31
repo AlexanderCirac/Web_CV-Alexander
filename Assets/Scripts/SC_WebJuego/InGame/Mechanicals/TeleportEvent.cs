@@ -5,9 +5,9 @@ namespace WebGame.Game.Mechanical
     using WebCV.Tools.Interface;
     public class TeleportEvent : MonoBehaviour, IPlayerEnterCollider
     {
-        #region Attributes
-        [Header("Set Objecto to teleport player")]
-        [SerializeField] private GameObject _destiniTeleport;
+        #region Attributes  
+        //Destiny
+        [HideInInspector] public GameObject _destiniTeleport;
         #endregion
 
         #region private custom methods
